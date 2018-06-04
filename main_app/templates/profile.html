@@ -2,17 +2,20 @@
 {% load staticfiles %}
 
 {% block content %}
+<h1>Welcome Back!</h1>
 
-<h4>My trips:</h4>
+<h4>My Trips:</h4>
 
 {% for trip in trips %}
     <a href="/{{trip.id}}">
     	<p>Destination: {{trip.destination}}</p>
     </a>
-    	<p>Duration: {{trip.duration}}</
+    	<p>Duration: {{trip.duration}}</p>
     <hr />
 {%endfor%}
-    <hr />
+   <br>
+   <br>
+   <h4>Plan New Trip</h4>
     <form action="/post_url/" method="post">
       {% csrf_token %}
       {{ form.as_p }}
@@ -20,5 +23,6 @@
     </form>
 
     <a href="{% url 'logout' %}" class="waves-effect waves-light btn-small">Logout</a>
+    <a href= "/">Home</a>
 
 {% endblock %}

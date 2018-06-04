@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<h4>My trips:</h4>
+
+{% for trip in trips %}
+    <a href="/{{trip.id}}">
+    	<p>Destination: {{trip.destination}}</p>
+    </a>
+    	<p>Duration: {{trip.duration}}</
+    <hr />
+{%endfor%}
+    <hr />
+    <form action="/post_url/" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Add Trip" class="waves-effect waves-light btn-small">
+    </form>
+
+    <a href="{% url 'logout' %}" class="waves-effect waves-light btn-small">Logout</a>
+
+{% endblock %}

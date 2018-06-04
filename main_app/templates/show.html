@@ -1,0 +1,20 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Trip Planner</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
+    	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    </head>
+    <body>
+    	<h1> Cheapskate </h1>
+
+    	<h2> Destination: {{trip.destination}} </h2>
+    	<p> Duration: {{trip.duration}}</p>
+    	<p> Languages: {{trip.languages}}</p>
+    	<p> Climate: {{trip.climate}} </p>
+    	<p> Items Needed: {{trip.items_needed}}</p>
+    	<a href="/">Home</a>
+        <a href="{% url 'profile' user.username %}">Back to Profile</a>
+    </body>
+    </html>

@@ -1,0 +1,15 @@
+h1 {
+	color: turquoise;
+	text-align: center;
+	font-weight: bold!important;
+}
+h3 {
+	text-align: center;
+	font-size: 25px!important;
+	font-weight: bold!important;
+}
+footer {
+	text-align: center;
+	bottom: 0!important;
+	font-weight: bold;
+}

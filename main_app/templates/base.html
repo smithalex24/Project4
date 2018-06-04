@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Trip Planner</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
+  	</head>
+  	<body>
+      {% block content %}
+  		{% if user.is_authenticated %}
+        <a href="{% url 'profile' user.username %}">Hello, {{user.username}}!</a> |
+        <a href="{% url 'logout' %}">Logout</a>
+      {% else %}
+        <a href="{% url 'login' %}">Login</a>
+      {% endif %}
+
+      {% endblock %}
+  		<footer>
+  			Made by Alex Smith, 2018
+  		</footer>
+  	</body>
+  	</html>

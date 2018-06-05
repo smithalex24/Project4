@@ -2,27 +2,39 @@
 {% load staticfiles %}
 
 {% block content %}
-<h1>Welcome Back!</h1>
+<body id = "profilebody"></body>
+<div><h1 id = "welcome">Welcome Back!</h1></div>
+<br>
+<br>
 
-<h4>My Trips:</h4>
-
-{% for trip in trips %}
-    <a href="/{{trip.id}}">
-    	<p>Destination: {{trip.destination}}</p>
-    </a>
-    	<p>Duration: {{trip.duration}}</p>
-    <hr />
+  <div class = "container">
+    <div class = "mytrips">
+      <h4 class="plan">My Trips:</h4>
+        {% for trip in trips %}
+          <a href="/{{trip.id}}" class="link">
+    	     <p>Destination: {{trip.destination}}</p>
+          </a>
+    	     <p>Duration: {{trip.duration}}</p>
+           <hr>
 {%endfor%}
-   <br>
-   <br>
-   <h4>Plan New Trip</h4>
-    <form action="/post_url/" method="post">
+      </div>
+    </div>
+
+  <div class = "col-s6">
+    <h4 class="plan">Plan New Trip</h4>
+      <form action="/post_url/" method="post">
       {% csrf_token %}
       {{ form.as_p }}
-      <input type="submit" value="Add Trip" class="waves-effect waves-light btn-small">
+      <input type="submit" value="Add Trip" class="btn">
     </form>
+  </div>
+</div>
+  
+  <div class = "profilebuttons">
+    <a href="{% url 'logout' %}" class="btn">Logout</a>
+    <a href= "/" class = "btn">Home</a>
+    <a href="{% url 'search' %}" class="btn">Find a new trip</a>
+  </div>
 
-    <a href="{% url 'logout' %}" class="waves-effect waves-light btn-small">Logout</a>
-    <a href= "/">Home</a>
 
 {% endblock %}

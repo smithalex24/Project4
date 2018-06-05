@@ -4,7 +4,8 @@
 	<head>
 		<title>Trip Planner</title>
 		<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
   	</head>
   	<body>
       {% block content %}
@@ -16,8 +17,9 @@
       {% endif %}
 
       {% endblock %}
-  		<footer>
-  			Made by Alex Smith, 2018
-  		</footer>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9HBw5avpPjO8WS3Tl6SE1C09xTN-CQTY&libraries=places&callback=initAutocomplete"async defer>
+</script>
+<script src="app.js"></script>
   	</body>
   	</html>

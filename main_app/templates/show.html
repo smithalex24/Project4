@@ -3,17 +3,33 @@
 <html>
 	<head>
 		<title>Trip Planner</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
+        <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
     	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     </head>
-    <body>
-    	<h1> Cheapskate </h1>
-
-    	<h2> Destination: {{trip.destination}} </h2>
-    	<p> Duration: {{trip.duration}}</p>
-    	<p> Languages: {{trip.languages}}</p>
-    	<p> Climate: {{trip.climate}} </p>
-    	<p> Items Needed: {{trip.items_needed}}</p>
-        <a href="{% url 'profile' user.username %}">Back to Profile</a>
+    <body id ="show">
+    	<h1> My Trips </h1>
+        <div class = "container">
+            <div class = "singletrip">
+            	<h2> Destination: {{trip.destination}} </h2>
+            	<p class= "newtrip"> Duration: {{trip.duration}}</p>
+            	<p class= "newtrip"> Languages: {{trip.languages}}</p>
+            	<p class= "newtrip"> Climate: {{trip.climate}} </p>
+            	<p class= "newtrip"> Items Needed: {{trip.items_needed}}</p>
+                
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class = "container">
+            <div class = "backtoprofile">
+            <a href="{% url 'profile' user.username %}" class="btn">Back to Profile</a>
+            </div>
+        </div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9HBw5avpPjO8WS3Tl6SE1C09xTN-CQTY&libraries=places&callback=initAutocomplete"async defer>
+</script>
+<script src="app.js"></script>
     </body>
     </html>

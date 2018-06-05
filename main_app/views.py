@@ -29,6 +29,9 @@ def profile(request, username):
 	form = TripForm()
 	return render(request, 'profile.html', {'username': username, 'trips': trips, 'form': form})
 
+def search_view(request):
+	return render(request, 'search.html')
+
 
 def login_view(request):
 	if request.method == 'POST':

@@ -1,15 +1,119 @@
 h1 {
-	color: turquoise;
+	color: white;
 	text-align: center;
 	font-weight: bold!important;
+	font-family: 'Shadows Into Light Two', cursive;
+}
+#mainh1 {
+	color: white;
+	font-family: 'Shadows Into Light Two', cursive;
+	font-size: 100px;
 }
 h3 {
 	text-align: center;
-	font-size: 25px!important;
+	font-size: 35px!important;
 	font-weight: bold!important;
+	font-family: 'Shadows Into Light Two', cursive;
 }
-footer {
+h2 {
+	font-family: 'Shadows Into Light Two', cursive;
+	font-size: 55px;
+	color:#3bd6c6;
+	font-weight: bold!important;
 	text-align: center;
+
+}
+
+p {
+	width: 100%;
+	font-family: 'Shadows Into Light Two', cursive;
+	font-size: 25px;
+	color: white;
+}
+#destination {
+	color:#3bd6c6;
+}
+#trips {
+	
+	padding: 10px;
+	width: 40%;
+	font-family: 'Shadows Into Light Two', cursive;
+
+}
+#profilebody, #searchbody, #loginbody, #show {
+	background: #f6b763;
+	padding: 20px;
+}
+
+#tripform {
+	border: 3px solid white;
+	width: 50%;
+	border-radius: 5px;
+	font-family: 'Shadows Into Light Two', cursive;
+	font-size: 50px!important;
+	top: 50%;
+	left: 50%;
+}
+#indexbody {
+	background-image: url('car.jpg');
+	position: relative;
+	background-size: 100%;
+    background-size: cover;
+	background-position: center center;
+	margin: 0 auto;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+.form1{
+	text-align: center;
+	padding: 20px;
+	position: center center;
+	margin-left: 100%!important;
+	width: 100%;
+	
+}
+h4 {
+	font-family: 'Shadows Into Light Two', cursive;
+	font-weight: bold!important;
+	color: #3bd6c6;
+
+}
+.mainh3 {
+	font-size: 45px!important;
+	color: white!important;
+}
+.plan {
+	font-size: 45px;
+	font-weight: bold!important;
+	text-align: center;
+}
+.profilebuttons {
+	position: relative;
+	text-align: center!important;
+}
+.backtoprofile{
+	text-align: center!important;
+	position: relative;
 	bottom: 0!important;
-	font-weight: bold;
+
+}
+.widget {
+	width: 100%;
+	color: black;
+}
+.btn {
+	background-color:#3bd6c6!important;
+}
+label {
+	font-size: 20px!important;
+	color: white!important;
+
+}
+.mytrips {
+	width: 100%;
+	left: 50%;
+	text-align: center;
+}
+.singletrip {
+	text-align: center;
 }

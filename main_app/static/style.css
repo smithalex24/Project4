@@ -98,8 +98,8 @@ h4 {
 
 }
 .widget {
-	width: 100%;
-	color: black;
+	
+	background:#3bd6c6!important;
 }
 .btn {
 	background-color:#3bd6c6!important;
@@ -107,6 +107,8 @@ h4 {
 label {
 	font-size: 20px!important;
 	color: white!important;
+	background: #f6b763;
+	font-family: 'Shadows Into Light Two', cursive;
 
 }
 .mytrips {

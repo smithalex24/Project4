@@ -33,6 +33,15 @@ def delete_view(request, trip_id):
 		new_url = '/user/' + request.user.username
 		return HttpResponseRedirect(new_url)
 
+def update_view(request, trip_id):
+	if request.user.is_authenticated and request.method == "POST":
+		trip = Trip.objects.get(id=trip_id)
+		form = TripForm(request.POST)
+		if form.is_valid():
+			form.save()
+			new_url = '/user/' + request.user.username
+			return HttpResponseRedirect(new_url)
+		return render(request, 'show.html', {'form': form})
 
 def profile(request, username):
 	user = User.objects.get(username=username)

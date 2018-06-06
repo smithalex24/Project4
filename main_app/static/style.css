@@ -40,7 +40,7 @@ p {
 	font-family: 'Shadows Into Light Two', cursive;
 
 }
-#profilebody, #searchbody, #loginbody, #show {
+#profilebody, #searchbody, #loginbody, #show, #signupbody {
 	background: #f6b763;
 	padding: 20px;
 }

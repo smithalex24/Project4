@@ -17,6 +17,10 @@
             	<p class= "newtrip"> Languages: {{trip.languages}}</p>
             	<p class= "newtrip"> Climate: {{trip.climate}} </p>
             	<p class= "newtrip"> Items Needed: {{trip.items_needed}}</p>
+                <form action="{% url 'delete' trip.id %}" method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Delete" class="btn">
+                </form>
                 
             </div>
         </div>

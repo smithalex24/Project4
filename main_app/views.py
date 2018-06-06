@@ -1,10 +1,11 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Trip
 from .forms import TripForm, LoginForm
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
+
 
 
 def index(request):
@@ -22,6 +23,16 @@ def post_trip(request):
 		trip.save()
 	new_url = '/user/' + request.user.username
 	return HttpResponseRedirect(new_url)
+
+def delete_view(request, trip_id):
+	if request.user.is_authenticated and request.method == "POST":
+		trip = Trip.objects.get(id=trip_id)
+		print("this is the trip to delete", trip)
+		trip.delete()
+		print("these are now the user's trips", Trip.objects)
+		new_url = '/user/' + request.user.username
+		return HttpResponseRedirect(new_url)
+
 
 def profile(request, username):
 	user = User.objects.get(username=username)
@@ -56,7 +67,6 @@ def login_view(request):
 def logout_view(request):
 	logout(request)
 	return HttpResponseRedirect('/')
-
 
 
 

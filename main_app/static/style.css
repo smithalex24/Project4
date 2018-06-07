@@ -63,6 +63,7 @@ p {
 	margin: 0 auto;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	padding: 0 0 100px 0;
 }
 .form1{
 	text-align: center;
@@ -136,6 +137,27 @@ label {
 	border-radius: 10px;
 	padding: 0px 10px 0px 10px;
 	color: white;
-
-
 }
+footer {
+	text-align: center!important;
+	background-color: #3bd6c6;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	font-size: 15px;
+	width: 100%;
+	font-weight: bold;
+	color: white;
+	height: 1rem;
+	padding: 2rem;
+	opacity: .7;
+	font-family: 'Shadows Into Light Two', cursive;
+}
+#footer {
+	text-align: center!important;
+	font-size: 20px;
+	padding: 1rem;
+	height: 40px;
+
+}	

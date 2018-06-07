@@ -3,20 +3,19 @@
 
 {% block content %}
 <body id = "loginbody"></body>
-<h1>Login</h1>
+<h1>Sign Up</h1>
 <br>
 <br>
 <br>
 <div class = "container">
-	<div class = "loginform">
+	<div class = "signupform">
 		<form method="POST" action=".">
   			{% csrf_token %}
   			{{ form.as_p}}
-  			<input type="submit" value="Submit" class= "btn" />
+  			<input type="submit" value="Sign Up" class= "btn" />
   			<a href= "/" class = "btn">Home</a>
 		</form>
 	</div>
 </div>
 
 {% endblock %}
-

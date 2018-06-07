@@ -119,3 +119,23 @@ label {
 .singletrip {
 	text-align: center;
 }
+.helptext {
+	display: none;
+}
+#getstarted {
+	font-size: 80px;
+	background-color: #3bd6c6;
+	opacity: .7;
+	border-radius: 15px;
+	padding: 10px;
+	color: white;
+}
+#loginhere {
+	background-color: #ee1289;
+	opacity: .7;
+	border-radius: 10px;
+	padding: 0px 10px 0px 10px;
+	color: white;
+
+
+}

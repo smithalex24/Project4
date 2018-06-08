@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +26,7 @@ SECRET_KEY = 'whp88ko6@xf2@a$((sx2_c5fcb50r#opo&d%el&d(g_j3p($-w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://trek-mate-app.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -74,13 +75,18 @@ WSGI_APPLICATION = 'Project4.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': ('trips'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': ('trips'),
+#     }
+# }
 
+DATABASES = {}
+DATABASES['default'] = dj_database_url.config(
+    default='postgres://swcndwxptgsxmu:103a9794fb0d833498c448ae1349194369a4b95448d0348b152afe30260042b6@ec2-54-235-75-214.compute-1.amazonaws.com:5432/dacm85p4m3li5l'
+
+)
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators

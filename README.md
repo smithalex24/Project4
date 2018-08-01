@@ -4,6 +4,8 @@
 
 *Trekmate* is a mobile-friendly trip planning app that is geared towards busy, forgetful travelers on a budget. It allows you to plan your own trip, search for places to go and find cheap flights! If you're already on the road, you can plan as you go.
 
+### [**Click to see the App! **](https://trek-mate-app.herokuapp.com/)<br>
+
 ![image](https://user-images.githubusercontent.com/36453286/41125370-20b8d04e-6a59-11e8-89d4-24020f30cfba.png)
 
 ## Development 
